@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Time spent on Page -->
+    <div id="time-spent">
+        <p>Time Spent on Page: <span id="time-elapsed">0:00</span></p>
+    </div>
+
+    <!-- Cooking Timer -->
+<div id="cooking-timer">
+    <label for="timer-input">Set Cooking Timer (in minutes):</label>
+    <input type="number" id="timer-input" placeholder="Enter time in minutes" min="1" required />
+    <button id="start-timer">Start Timer</button>
+</div>
+
+<!-- Remaining time -->
+<div id="timer-display"></div>
+
+<input type="text" id="search-box" placeholder="Search recipes by title" />
+
+<br>
+
+<button id="sort-button">Sort by # of Ingredients</button>
+
+<button id="reset-button">Reset</button>
+
+<br>
+
+<input type="text" id="ingredient-input" placeholder="Enter an ingredient">
+<button id="search-button">Search Price</button>
+
+<p id="price-output">Price will be displayed here</p>
+
+<div id="recipe-display" class="grid-container"></div>
+
+<section id="project-info">
+    <h2>About This Project</h2>
+    <p>This is a dynamic recipe application that lets users explore, search, and sort recipes, as well as add new ones. It also includes a built-in cooking timer, tracks time spent on the page, and lets users check the estimated price of ingredients using the Spoonacular API.</p>
+    <ul>
+        <li>🔍 Search recipes by title</li>
+        <li>🧾 Sort recipes by number of ingredients</li>
+        <li>➕ Add your own recipe</li>
+        <li>⏲️ Use a timer while cooking</li>
+        <li>💰 Check ingredient prices</li>
+        <li>⏱️ See how long you've been on the page</li>
+    </ul>
+</section>
+
+
+<form id="recipe-form" class="form-recipe">
+    <h3>Add a New Recipe</h3>
+    
+    <label for="recipe-title">Title:</label>
+    <input type="text" id="recipe-title" required />
+    
+    <label for="recipe-desc">Description:</label>
+    <textarea id="recipe-desc" required></textarea>
+    
+    <label for="recipe-img">Image URL:</label>
+    <input type="url" id="recipe-img" required />
+    
+    <fieldset>
+        <legend>Ingredients (at least 5)</legend>
+        
+        <div class="ingredient-group">
+            <input type="text" class="ingredient-name" placeholder="Name" required />
+            <input type="text" class="ingredient-amount" placeholder="Amount" required />
+        </div>
+        
+        <div class="ingredient-group">
+            <input type="text" class="ingredient-name" placeholder="Name" required />
+            <input type="text" class="ingredient-amount" placeholder="Amount" required />
+        </div>
+        
+        <div class="ingredient-group">
+            <input type="text" class="ingredient-name" placeholder="Name" required />
+            <input type="text" class="ingredient-amount" placeholder="Amount" required />
+        </div>
+        
+        <div class="ingredient-group">
+            <input type="text" class="ingredient-name" placeholder="Name" required />
+            <input type="text" class="ingredient-amount" placeholder="Amount" required />
+        </div>
+        
+        <div class="ingredient-group">
+            <input type="text" class="ingredient-name" placeholder="Name" required />
+            <input type="text" class="ingredient-amount" placeholder="Amount" required />
+        </div>
+    </fieldset>
+    
+    <div class="form-button">
+        <input type="submit" value="Add Recipe" />
+    </div>
+
+</form>
+</body>
+</html>
